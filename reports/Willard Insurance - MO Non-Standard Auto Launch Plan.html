@@ -130,15 +130,20 @@
     .row{flex-direction:column;gap:4px;} .row .k{width:auto;}
     .hero{padding:32px 26px;} .hero h1{font-size:26px;}
   }
+  .back-hub{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--goal-brand);text-decoration:none;border:1px solid rgba(7,123,229,0.25);padding:8px 14px;border-radius:8px;margin-bottom:22px;transition:background .15s,border-color .15s;}
+  .back-hub:hover{background:rgba(7,123,229,0.07);border-color:rgba(7,123,229,0.45);}
   @media print{
     body{background:#fff;} .wrap{padding:0;}
     .kpi,.card,.phase,.day,.bidbox{box-shadow:none;}
     .hero{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .back-hub{display:none;}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
+
+  <a class="back-hub" href="../index.html">&larr; Account Hub</a>
 
   <!-- HERO -->
   <header class="hero">

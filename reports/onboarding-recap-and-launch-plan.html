@@ -27,6 +27,9 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--navy-deep);color:
 .bar{display:flex;justify-content:space-between;align-items:center;padding:26px 70px;border-bottom:1px solid var(--line);}
 .bar img{height:26px;}
 .bar .r{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mint);font-weight:700;}
+.bar-l{display:flex;align-items:center;gap:20px;}
+.back{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--tx-dim);text-decoration:none;border:1px solid var(--line);padding:7px 13px;border-radius:8px;transition:color .15s,border-color .15s,background .15s;}
+.back:hover{color:#fff;border-color:rgba(150,190,225,.4);background:rgba(150,190,225,.08);}
 
 /* ---------- Hero ---------- */
 .hero{padding:64px 70px 52px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;}
@@ -177,7 +180,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--navy-deep);color:
 .foot .t2{font-size:11px;color:#4d6e8c;margin-top:6px;}
 
 @media print{
-  body{background:#fff;} .doc{max-width:none;}
+  body{background:#fff;} .doc{max-width:none;} .back{display:none;}
   .sec,.camp,.diff,.phase,.rcard,.acol,.close,.rstep{break-inside:avoid;}
 }
 @media(max-width:880px){
@@ -196,7 +199,10 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--navy-deep);color:
 <div class="doc" data-screen-label="Willard — Onboarding Recap &amp; Launch Plan (Navy Editorial)">
 
   <div class="bar">
-    <img src="../assets/goal-wordmark-white.png" alt="GOAL">
+    <div class="bar-l">
+      <a class="back" href="../index.html">&larr; Account Hub</a>
+      <img src="../assets/goal-wordmark-white.png" alt="GOAL">
+    </div>
     <div class="r">Onboarding Recap &middot; Launch Plan</div>
   </div>
 
