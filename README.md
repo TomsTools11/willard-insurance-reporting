@@ -1,21 +1,23 @@
 # Willard Insurance — Account Hub
 
 A self-contained static site that serves as the GOAL reporting hub for **Willard
-Insurance** (Account #958). The landing page previews and links to the client
-report; the report is a standalone, print-friendly HTML document.
+Insurance** (Account #958). The landing page links to the client reports; each
+report is a standalone, print-friendly HTML document built on the structured
+dashboard template (navy sidebar, numbered sections, light content shell).
 
 ## Structure
 
 ```
 .
-├── index.html                                  # Landing page (Account Hub)
+├── index.html                                      # Landing page (Account Hub)
 ├── reports/
-│   └── onboarding-recap-and-launch-plan.html   # Onboarding Recap & Launch Plan report
-├── assets/                                     # GOAL brand marks (logos, favicon)
+│   ├── mo-commercial-performance-review.html       # MO Commercial Performance Review (May 22 – Jun 10, 2026)
+│   └── mo-non-standard-auto-launch-plan.html       # MO Non-Standard Auto Launch Plan
+├── assets/                                         # GOAL brand marks (logos, favicon)
 │   ├── goal-mark.png
 │   ├── goal-wordmark-white.png
 │   └── goal-wordmark-black.png
-└── vercel.json                                 # Static hosting config (headers, caching)
+└── vercel.json                                     # Static hosting config (headers, caching)
 ```
 
 There is no build step — these are plain HTML files using Google Fonts (Inter)
@@ -24,16 +26,12 @@ works both when served and when opened directly from disk.
 
 ## View locally
 
-Open `index.html` in a browser. The landing page embeds a live preview of the
-report in an iframe and links to the full document.
+Open `index.html` in a browser, or run a tiny local server:
 
-> Most browsers allow the iframe preview to load over `file://`. If your browser
-> blocks it, run a tiny local server instead:
->
-> ```bash
-> python3 -m http.server 8000
-> # then visit http://localhost:8000
-> ```
+```bash
+python3 -m http.server 8000
+# then visit http://localhost:8000
+```
 
 ## Deploy on Vercel (via GitHub)
 
@@ -55,15 +53,15 @@ production deploy, and every pull request gets its own preview URL.
 Routes once deployed:
 
 - `/` → landing page
-- `/reports/onboarding-recap-and-launch-plan.html` → full report
+- `/reports/mo-commercial-performance-review.html` → MO Commercial Performance Review
+- `/reports/mo-non-standard-auto-launch-plan.html` → MO Non-Standard Auto Launch Plan
 
 ### Configuration notes
 
 `vercel.json` sets long-lived caching for `/assets/*`, a `nosniff` content-type
-policy, a `SAMEORIGIN` frame policy (so the landing page can embed the report in
-its same-origin preview iframe), and a sensible referrer policy. Clean URLs are
-intentionally left **off** so the `.html` links resolve identically whether the
-site is served by Vercel or opened straight from disk.
+policy, a `SAMEORIGIN` frame policy, and a sensible referrer policy. Clean URLs
+are intentionally left **off** so the `.html` links resolve identically whether
+the site is served by Vercel or opened straight from disk.
 
 The pages are marked `noindex` because this is a client-specific account hub
 rather than public marketing content.

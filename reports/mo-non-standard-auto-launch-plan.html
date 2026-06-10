@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Willard Insurance - MO Non-Standard Auto Launch Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#057BE5; --blue-hover:#0C6EC5; --sky:#308ED6; --mint:#3BEECA; --mint-d:#0fae8f;
+  --navy:#00172D; --navy-2:#062c4e; --navy-deep:#001020;
+  --ink:#0F1B2D; --body:#2B3442; --muted:#6A7482;
+  --white:#fff; --off:#F8FAFC; --gray:#EFF2F7; --divider:#EDF1F5; --line:#E2E8F0;
+  --success:#2BBF7A; --warning:#F0A93B;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(--body);line-height:1.55;}
+.shell{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:288px 1fr;min-height:100vh;background:var(--white);}
+
+/* ---------- Sidebar ---------- */
+.side{background:var(--navy);color:#cfe0ee;padding:34px 30px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;}
+.side .logo{height:30px;align-self:flex-start;margin-bottom:38px;}
+.side .eb{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#2D90EE;}
+.side h1{font-size:27px;font-weight:900;color:#fff;line-height:1.08;letter-spacing:-.02em;margin:10px 0 14px;}
+.side .who{font-size:13px;color:#a7c2da;line-height:1.6;}
+.side .who b{color:#fff;font-weight:600;}
+.side nav{margin-top:38px;display:flex;flex-direction:column;gap:2px;}
+.side nav a{font-size:13.5px;color:#9fbcd6;text-decoration:none;padding:9px 12px;border-radius:8px;display:flex;align-items:center;gap:11px;transition:background .15s,color .15s;}
+.side nav a:hover{background:rgba(255,255,255,.06);color:#fff;text-decoration:none;}
+.side nav a .dot{width:6px;height:6px;border-radius:50%;background:#3a6386;flex-shrink:0;}
+.side nav a:hover .dot{background:var(--mint);}
+.side .foot{margin-top:auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;color:#6f93b3;line-height:1.6;}
+.side .back{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:#9fbcd6;text-decoration:none;border:1px solid rgba(255,255,255,.18);padding:7px 13px;border-radius:8px;margin-bottom:28px;transition:color .15s,border-color .15s;}
+.side .back:hover{color:#fff;border-color:rgba(255,255,255,.4);}
+
+/* ---------- Main ---------- */
+.main{padding:46px 52px 60px;}
+.block{margin-bottom:46px;scroll-margin-top:24px;}
+.bhead{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.bhead .ix{font-size:12px;font-weight:800;color:var(--blue);font-variant-numeric:tabular-nums;background:#E6F1FD;padding:4px 9px;border-radius:6px;}
+.bhead h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.01em;}
+.bhead p{font-size:13.5px;color:var(--muted);margin-top:3px;}
+
+/* ---------- Exec ---------- */
+.exec{background:var(--off);border:1px solid var(--line);border-radius:14px;padding:24px 28px;margin-bottom:46px;}
+.exec p{font-size:15.5px;line-height:1.62;color:var(--body);}
+.exec p b{color:var(--ink);font-weight:700;}
+
+/* ---------- KPI cards ---------- */
+.kgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.kc{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--white);}
+.kc .v{font-size:32px;font-weight:900;color:var(--ink);letter-spacing:-.02em;line-height:1;}
+.kc .k{font-size:12.5px;color:var(--body);font-weight:600;margin-top:9px;}
+.kc .d{font-size:11.5px;color:var(--muted);margin-top:2px;}
+
+/* ---------- Panels & detail rows ---------- */
+.panel{border:1px solid var(--line);border-radius:14px;padding:26px 28px;background:var(--white);}
+.panel + .panel{margin-top:16px;}
+.panel .pt{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.04em;margin-bottom:18px;}
+.drow{display:flex;gap:18px;padding:13px 0;border-top:1px solid var(--divider);font-size:13.5px;line-height:1.58;}
+.drow:first-of-type{border-top:none;padding-top:0;}
+.drow:last-of-type{padding-bottom:0;}
+.drow .k{width:172px;flex-shrink:0;font-weight:700;color:var(--ink);}
+.drow .v{flex:1;color:var(--body);}
+.drow .v b{color:var(--ink);font-weight:700;}
+
+/* ---------- Chips ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chips span{font-size:12px;font-weight:600;color:var(--blue);background:#E6F1FD;border:1px solid rgba(5,123,229,.22);padding:6px 12px;border-radius:20px;}
+
+/* ---------- Bid boxes ---------- */
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px;}
+.bb{background:var(--off);border:1px solid var(--line);border-radius:12px;padding:18px 20px;}
+.bb .bk{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;margin-bottom:7px;}
+.bb .bv{font-size:26px;font-weight:900;color:var(--ink);letter-spacing:-.02em;line-height:1;}
+.bb .bs{font-size:12px;color:var(--muted);margin-top:7px;line-height:1.5;}
+
+/* ---------- Callout ---------- */
+.callout{background:#E6F1FD;border:1px solid rgba(5,123,229,.22);border-radius:12px;padding:18px 22px;font-size:13.5px;line-height:1.6;color:var(--body);margin-top:18px;}
+.callout b{color:var(--ink);font-weight:700;}
+
+/* ---------- Geo stats & ZIP tables ---------- */
+.geo{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px;}
+.geo .gs{background:var(--off);border:1px solid var(--line);border-radius:12px;padding:16px 18px;}
+.geo .gs .gv{font-size:24px;font-weight:900;color:var(--ink);letter-spacing:-.02em;line-height:1;}
+.geo .gs .gl{font-size:12px;color:var(--muted);margin-top:7px;line-height:1.45;}
+.tier{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);margin:22px 0 6px;display:flex;align-items:center;gap:9px;}
+.tier .td{width:9px;height:9px;border-radius:50%;background:var(--blue);flex-shrink:0;}
+.tier.t2 .td{background:var(--sky);}
+.tier.t3 .td{background:var(--mint-d);}
+.tier .tn{font-weight:500;text-transform:none;letter-spacing:0;color:var(--muted);}
+table.zip{width:100%;border-collapse:collapse;font-size:13.5px;}
+table.zip th{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--line);}
+table.zip td{padding:11px 12px 11px 0;border-bottom:1px solid var(--divider);vertical-align:top;}
+table.zip tr:last-child td{border-bottom:none;}
+table.zip .area{font-weight:700;color:var(--ink);}
+table.zip .cty{color:var(--muted);white-space:nowrap;}
+table.zip .zips{font-variant-numeric:tabular-nums;color:var(--body);line-height:1.55;}
+.method{font-size:11.5px;line-height:1.5;color:var(--muted);margin-top:14px;}
+
+/* ---------- Schedule ---------- */
+.sched{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;}
+.day{text-align:center;padding:13px 4px;border-radius:9px;border:1px solid var(--line);background:var(--white);}
+.day .dn{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+.day .dh{font-size:11.5px;color:var(--ink);font-weight:600;line-height:1.35;}
+.day.active{background:#E6F1FD;border-color:rgba(5,123,229,.3);}
+.day.partial{background:rgba(59,238,202,.12);border-color:rgba(15,174,143,.35);}
+.day.off{background:var(--off);}
+.day.off .dh{color:#B0B3BA;}
+
+/* ---------- Measurement phases ---------- */
+.phases{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.phase{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px;border-top:4px solid var(--blue);}
+.phase:nth-child(2){border-top-color:var(--sky);}
+.phase:nth-child(3){border-top-color:var(--mint);}
+.phase:nth-child(4){border-top-color:var(--mint-d);}
+.phase .pw{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:6px;}
+.phase .pm{font-size:15.5px;font-weight:800;color:var(--ink);margin-bottom:9px;line-height:1.25;}
+.phase .pd{font-size:12.5px;color:var(--muted);line-height:1.55;}
+
+@media print{
+  body{background:#fff;} .shell{display:block;max-width:none;}
+  .side{position:static;height:auto;flex-direction:row;align-items:center;justify-content:space-between;padding:20px 30px;}
+  .side nav,.side .foot,.side .back{display:none;} .side h1{margin:0;}
+  .kc,.panel,.phase,.day,.bb{break-inside:avoid;}
+}
+@media(max-width:900px){
+  .shell{grid-template-columns:1fr;}
+  .side{position:static;height:auto;}
+  .side nav{display:none;}
+  .main{padding:32px 22px;}
+  .kgrid{grid-template-columns:1fr 1fr;}
+  .bgrid,.geo,.phases{grid-template-columns:1fr;}
+  .drow{flex-direction:column;gap:4px;} .drow .k{width:auto;}
+  .sched{grid-template-columns:repeat(4,1fr);}
+}
+@media(max-width:560px){ .kgrid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="shell" data-screen-label="Dashboard report">
+
+  <aside class="side">
+    <a class="back" href="../index.html">&larr; All Reports</a>
+    <img class="logo" src="../assets/goal-wordmark-white.png" alt="GOAL">
+    <div class="eb">Campaign Launch Plan</div>
+    <h1>Willard Insurance</h1>
+    <div class="who">Prepared for <b>Weston Willard</b><br>Missouri &middot; Non-Standard Auto<br>Prepared June 4, 2026 &middot; Ready to launch</div>
+    <nav>
+      <a href="#s1"><span class="dot"></span>The plan in numbers</a>
+      <a href="#s2"><span class="dot"></span>Why now &amp; targeting</a>
+      <a href="#s3"><span class="dot"></span>Priority ZIP targets</a>
+      <a href="#s4"><span class="dot"></span>Bid strategy</a>
+      <a href="#s5"><span class="dot"></span>Budget &amp; schedule</a>
+      <a href="#s6"><span class="dot"></span>Measurement plan</a>
+    </nav>
+    <div class="foot">GOAL Performance Marketing<br>Account #958 &middot; Tom Panos</div>
+  </aside>
+
+  <main class="main">
+
+    <div class="exec">
+      <p>This is the launch plan for your second GOAL campaign, built to run alongside Missouri Commercial. We are targeting the non-standard auto market statewide: drivers who are currently uninsured, plus SR-22 and DUI profiles. A <b>$50/day budget at a blended ~$5.40 per click</b> supports an estimated <b>4 to 7 non-standard leads per day</b>, capped at 6 to protect your follow-up capacity. The plan below covers targeting, the recommended bids, the channel approach, and how we will measure the first 90 days.</p>
+    </div>
+
+    <section class="block" id="s1">
+      <div class="bhead"><span class="ix">01</span><div><h2>The plan in numbers</h2><p>Launch settings at a glance</p></div></div>
+      <div class="kgrid">
+        <div class="kc"><div class="v">$50</div><div class="k">Daily budget</div><div class="d">lean start, adjustable any time</div></div>
+        <div class="kc"><div class="v">$6.65</div><div class="k">Base bid</div><div class="d">anchored to the live MO auto market</div></div>
+        <div class="kc"><div class="v">~$5.40</div><div class="k">Blended cost per click</div><div class="d">across priority channels</div></div>
+        <div class="kc"><div class="v">6</div><div class="k">Daily lead cap</div><div class="d">protects your follow-up capacity</div></div>
+        <div class="kc"><div class="v">4&ndash;7</div><div class="k">Est. leads per day</div><div class="d">from roughly 8&ndash;10 daily clicks</div></div>
+        <div class="kc"><div class="v">52</div><div class="k">Priority ZIP codes</div><div class="d">across 13 counties, statewide base</div></div>
+      </div>
+    </section>
+
+    <section class="block" id="s2">
+      <div class="bhead"><span class="ix">02</span><div><h2>Why now &amp; who we target</h2><p>The non-standard opening in Missouri</p></div></div>
+      <div class="panel">
+        <div class="pt">Why now</div>
+        <div class="drow"><div class="k">Market timing</div><div class="v">Missouri&rsquo;s uptick in enforcement is pushing more uninsured and high-risk drivers to shop coverage. That demand lands directly in the non-standard market you write.</div></div>
+        <div class="drow"><div class="k">Favorable pricing</div><div class="v">Non-standard auto inventory prices <b>well below standard auto</b>. A blended cost near <b>$5.40 per click</b> means a modest $50/day budget still buys real daily volume.</div></div>
+        <div class="drow"><div class="k">Your edge</div><div class="v">You know this market well, you are securing the Traders appointment, and you have historically won against carriers like Auto-Owners when their rates spike. The campaign is built to feed that strength.</div></div>
+      </div>
+      <div class="panel">
+        <div class="pt">Built for the non-standard profile</div>
+        <div class="drow"><div class="k">Driver profile</div><div class="v"><div class="chips"><span>Currently Insured: No or Unknown</span><span>SR-22: Included</span><span>DUI: Included</span><span>Age skew: younger where applicable</span></div></div></div>
+        <div class="drow"><div class="k">Geography</div><div class="v">Missouri statewide. We start broad to collect data, then weight bids toward the priority ZIP areas in section 03, where non-standard demand concentrates.</div></div>
+        <div class="drow"><div class="k">Reference playbook</div><div class="v">Modeled on a mature non-standard auto account already running this exact targeting profile on the platform, so we launch from a proven starting point rather than from scratch.</div></div>
+        <div class="drow"><div class="k">Lead delivery</div><div class="v">Same routing as Commercial: email to <b>weston@insurewillard.com</b>, live calls to <b>417-685-7323</b>, plus the AgencyZoom integration once it is live.</div></div>
+      </div>
+    </section>
+
+    <section class="block" id="s3">
+      <div class="bhead"><span class="ix">03</span><div><h2>Priority ZIP targets</h2><p>Where the non-standard demand concentrates, by county</p></div></div>
+      <div class="panel">
+        <div class="geo">
+          <div class="gs"><div class="gv">52 ZIPs</div><div class="gl">Priority non-standard areas across the state</div></div>
+          <div class="gs"><div class="gv">13 counties</div><div class="gl">Three metro tiers, urban cores first</div></div>
+          <div class="gs"><div class="gv">~13&ndash;16%</div><div class="gl">Estimated Missouri uninsured-driver rate</div></div>
+        </div>
+        <p style="font-size:13.5px;line-height:1.6;color:var(--body);margin-bottom:4px;">
+          These are the areas where the non-standard profile is densest: higher uninsured-driver rates, lower median household income, younger and more renter-heavy households, and the urban traffic volume that produces SR-22 and DUI shoppers. We rank them by lead volume first, so the budget lands where both the demand and the click density are highest. The base campaign still runs statewide; this list is what we weight bids toward, and the basis for a focused ad group once volume supports one.
+        </p>
+
+        <div class="tier"><span class="td"></span>Tier 1 &middot; Primary <span class="tn">&mdash; highest volume and densest non-standard demand</span></div>
+        <table class="zip">
+          <thead><tr><th>Metro / Area</th><th>County</th><th>Target ZIP Codes</th></tr></thead>
+          <tbody>
+            <tr><td class="area">St. Louis (city core)</td><td class="cty">St. Louis City</td><td class="zips">63107, 63113, 63115, 63120, 63147, 63106, 63112, 63118, 63111, 63116</td></tr>
+            <tr><td class="area">North St. Louis County (inner ring)</td><td class="cty">St. Louis County</td><td class="zips">63136, 63137, 63135, 63138, 63133, 63134, 63121, 63031, 63033</td></tr>
+            <tr><td class="area">Kansas City (east &amp; south)</td><td class="cty">Jackson</td><td class="zips">64127, 64128, 64130, 64124, 64123, 64126, 64109, 64132, 64134, 64131, 64110, 64138</td></tr>
+          </tbody>
+        </table>
+
+        <div class="tier t2"><span class="td"></span>Tier 2 &middot; Secondary Metros <span class="tn">&mdash; solid volume, strong demographics</span></div>
+        <table class="zip">
+          <thead><tr><th>Metro / Area</th><th>County</th><th>Target ZIP Codes</th></tr></thead>
+          <tbody>
+            <tr><td class="area">Springfield</td><td class="cty">Greene</td><td class="zips">65802, 65803, 65806, 65807</td></tr>
+            <tr><td class="area">Independence</td><td class="cty">Jackson</td><td class="zips">64050, 64052, 64053</td></tr>
+            <tr><td class="area">Columbia</td><td class="cty">Boone</td><td class="zips">65201, 65202</td></tr>
+            <tr><td class="area">Joplin</td><td class="cty">Jasper</td><td class="zips">64801, 64804</td></tr>
+            <tr><td class="area">St. Joseph</td><td class="cty">Buchanan</td><td class="zips">64501, 64503, 64504, 64505</td></tr>
+          </tbody>
+        </table>
+
+        <div class="tier t3"><span class="td"></span>Tier 3 &middot; High-Need Smaller Markets <span class="tn">&mdash; lower volume, strong non-standard fit</span></div>
+        <table class="zip">
+          <thead><tr><th>Metro / Area</th><th>County</th><th>Target ZIP Codes</th></tr></thead>
+          <tbody>
+            <tr><td class="area">Sikeston</td><td class="cty">Scott</td><td class="zips">63801</td></tr>
+            <tr><td class="area">Poplar Bluff</td><td class="cty">Butler</td><td class="zips">63901</td></tr>
+            <tr><td class="area">Cape Girardeau</td><td class="cty">Cape Girardeau</td><td class="zips">63701</td></tr>
+            <tr><td class="area">Sedalia</td><td class="cty">Pettis</td><td class="zips">65301</td></tr>
+            <tr><td class="area">Kennett</td><td class="cty">Dunklin</td><td class="zips">63857</td></tr>
+            <tr><td class="area">Caruthersville</td><td class="cty">Pemiscot</td><td class="zips">63830</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <b>How we use this:</b> the campaign opens statewide so we capture every non-standard lead, while we weight bids up toward the Tier 1 and Tier 2 areas. Once daily volume supports it, we split these ZIPs into a dedicated ad group at a small bid premium to stay competitive in the tighter footprint. We then confirm the list against your real bind data and promote the ZIPs that actually close.
+        </div>
+        <p class="method">
+          Selection method: neighborhood median household income and IRS adjusted-gross-income data (zipdatamaps), Insurance Research Council uninsured-driver estimates for Missouri, and population density as a proxy for lead volume. Starting hypothesis to validate against disposition data after launch.
+        </p>
+      </div>
+    </section>
+
+    <section class="block" id="s4">
+      <div class="bhead"><span class="ix">04</span><div><h2>Bid strategy</h2><p>Priced to win the value positions</p></div></div>
+      <div class="panel">
+        <div class="bgrid">
+          <div class="bb"><div class="bk">Base bid</div><div class="bv">$6.65</div><div class="bs">Set to the live market cost of the highest-volume mid-priced channel in Missouri auto.</div></div>
+          <div class="bb"><div class="bk">Effective bid range</div><div class="bv">$4.30&ndash;$7.30</div><div class="bs">What we actually bid per channel after tuning each one to its position.</div></div>
+          <div class="bb"><div class="bk">Blended cost / click</div><div class="bv">~$5.40</div><div class="bs">Weighted across the channels carrying the volume.</div></div>
+        </div>
+        <div class="drow"><div class="k">Positioning approach</div><div class="v">We deliberately price to the <b>third position</b> on the ad wall rather than fighting for the top spot. Non-standard shoppers actively scroll and compare, so a value position still captures the click, at a meaningfully lower cost than the carriers paying up for first.</div></div>
+        <div class="drow"><div class="k">Channel concentration</div><div class="v">Budget is concentrated on the high-volume, value-priced channels: referral networks, email, the paid-search variants, and native and social. This is where the non-standard inventory the larger carriers overlook actually lives.</div></div>
+        <div class="drow"><div class="k">What we hold back</div><div class="v">The premium search channels run $30 to $55 per click. The economics do not fit a non-standard book, so we keep those throttled down rather than letting them drain the daily budget.</div></div>
+        <div class="callout">
+          <b>Why a $6.65 base when leads price lower?</b> The base bid is the anchor we tune from, not the price you pay on most clicks. After we step the priority channels down to their value positions, the realized cost lands near <b>$5.40 per click</b>, with the cheapest productive channels closer to <b>$4.30</b>.
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="s5">
+      <div class="bhead"><span class="ix">05</span><div><h2>Budget, pacing &amp; schedule</h2><p>What $50 a day buys, and when it runs</p></div></div>
+      <div class="panel">
+        <div class="pt">Budget &amp; pacing</div>
+        <div class="drow"><div class="k">Daily budget</div><div class="v"><b>$50/day</b> to start. A lean opening lets us confirm non-standard lead quality before scaling. Slight daily overages can occur when a winning bid pushes spend just past the cap.</div></div>
+        <div class="drow"><div class="k">Expected volume</div><div class="v">At a blended ~$5.40 per click, the budget supports roughly <b>8 to 10 clicks per day</b>, funneling to an estimated <b>4 to 7 non-standard leads per day</b> as the campaign settles. We confirm the real figure in week one.</div></div>
+        <div class="drow"><div class="k">Lead cap</div><div class="v">Capped at <b>6 leads per day</b> so volume never outruns your follow-up. We lift the cap once you are ready for more.</div></div>
+        <div class="drow"><div class="k">Room to scale</div><div class="v">If week-one quality holds and you want more, raising the budget to $75 or $100/day is a same-day change. Missouri demand supports it.</div></div>
+      </div>
+      <div class="panel">
+        <div class="pt">Schedule &middot; Central Time</div>
+        <div class="sched">
+          <div class="day active"><div class="dn">Mon</div><div class="dh">9a&ndash;7p</div></div>
+          <div class="day active"><div class="dn">Tue</div><div class="dh">9a&ndash;7p</div></div>
+          <div class="day active"><div class="dn">Wed</div><div class="dh">9a&ndash;7p</div></div>
+          <div class="day active"><div class="dn">Thu</div><div class="dh">9a&ndash;7p</div></div>
+          <div class="day active"><div class="dn">Fri</div><div class="dh">9a&ndash;7p</div></div>
+          <div class="day off"><div class="dn">Sat</div><div class="dh">Off</div></div>
+          <div class="day partial"><div class="dn">Sun</div><div class="dh">2p&ndash;6p<br>light</div></div>
+        </div>
+        <div class="callout">
+          We mirror your Commercial hours to start. After week one we can shift weight toward evenings, when non-standard shoppers tend to be most active, based on what the data shows.
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="s6" style="margin-bottom:0;">
+      <div class="bhead"><span class="ix">06</span><div><h2>Measurement plan</h2><p>The right metric at the right time</p></div></div>
+      <div class="phases">
+        <div class="phase"><div class="pw">Days 0&ndash;14</div><div class="pm">Contact Rate &amp; Pacing</div><div class="pd">Are you reaching the leads quickly, and is the $50 daily budget pacing cleanly across the day? Speed to lead is the earliest signal of a healthy campaign.</div></div>
+        <div class="phase"><div class="pw">Days 15&ndash;30</div><div class="pm">Quote Rate</div><div class="pd">Of the leads you reach, how many become quote-worthy? Channel patterns emerge here, and we begin tuning bids and timing against them.</div></div>
+        <div class="phase"><div class="pw">Days 30&ndash;60</div><div class="pm">First CPA Read</div><div class="pd">The first reliable cost per bound policy, once leads have had time to move through quoting and binding. We calibrate bids against your real close data.</div></div>
+        <div class="phase"><div class="pw">Days 60&ndash;90</div><div class="pm">Return &amp; Scale</div><div class="pd">Sustained CPA and premium trend. We decide what to scale, what to refine, and whether to widen hours or budget.</div></div>
+      </div>
+      <div class="callout">
+        Because this campaign is brand new, we judge the first few weeks on <b>contact rate and quote rate</b>, not cost per acquisition. Bound policies take time to mature, so an early CPA number would be misleading. We will walk through these together at your biweekly reviews, Tuesdays at 2:00 PM CT.
+      </div>
+      <div class="callout" style="border-left:4px solid var(--blue);">
+        <b>One standing action from you: export your full quote &amp; bind data from AgencyZoom and send it to Tom at least 24 hours before every review.</b> For your first review, the export should cover everything from when we started through the current date. Going forward, each export only needs to span the window between your previous review and the current one. This data is what lets us measure true performance &mdash; quote rate, bind rate, and cost per bound policy &mdash; and tune the campaign around the leads that actually convert for you, so getting it over a day ahead keeps every review focused on decisions rather than data gathering.
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
