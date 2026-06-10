@@ -4,97 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willard Insurance — Account Hub</title>
-<meta name="description" content="Willard Insurance reporting hub on GOAL — the Onboarding Recap & Launch Plan for the phased Missouri rollout, campaign setup, and shared action plan.">
+<meta name="description" content="Willard Insurance reporting hub on GOAL — the MO Commercial Performance Review and the MO Non-Standard Auto Launch Overview.">
 <link rel="icon" type="image/png" href="assets/goal-mark.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Willard Insurance — Account Hub">
-<meta property="og:description" content="Your reporting hub on GOAL: the Onboarding Recap & Launch Plan for the phased Missouri rollout.">
+<meta property="og:description" content="Your reporting hub on GOAL: the MO Commercial Performance Review and the MO Non-Standard Auto Launch Overview.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --blue:#2D90EE; --blue-deep:#057BE5; --blue-hover:#0C6EC5; --mint:#3BEECA;
-  --navy:#00172D; --navy-2:#04203c; --navy-3:#0a2c4d; --navy-deep:#001020;
-  --ink:#0F1B2D; --line:rgba(150,190,225,.16); --line-2:rgba(150,190,225,.10);
-  --tx:#e7f1fb; --tx-dim:#9fbdd8; --tx-dimmer:#6f93b3;
+  --blue:#057BE5; --blue-hover:#0C6EC5; --sky:#308ED6; --mint:#3BEECA; --mint-d:#0fae8f;
+  --navy:#00172D; --navy-2:#062c4e; --navy-deep:#001020;
+  --ink:#0F1B2D; --body:#2B3442; --muted:#6A7482;
+  --white:#fff; --off:#F8FAFC; --gray:#EFF2F7; --divider:#EDF1F5; --line:#E2E8F0;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{-webkit-font-smoothing:antialiased;}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--navy-deep);color:var(--tx);line-height:1.55;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(--body);line-height:1.55;}
+.shell{max-width:1280px;margin:0 auto;min-height:100vh;background:var(--white);display:flex;flex-direction:column;}
 
-.top{background:var(--navy);color:var(--tx-dim);padding:22px 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);}
-.top img{height:24px;}
-.top .r{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mint);font-weight:700;}
+/* ---------- Top band ---------- */
+.top{background:var(--navy);color:#cfe0ee;padding:22px 52px;display:flex;align-items:center;justify-content:space-between;}
+.top img{height:26px;}
+.top .r{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2D90EE;font-weight:700;}
 
-.wrap{max-width:1180px;margin:0 auto;padding:60px 56px 84px;}
+/* ---------- Hero ---------- */
+.hero{background:var(--navy);color:#cfe0ee;padding:30px 52px 48px;border-bottom:1px solid var(--line);}
+.hero .eb{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#2D90EE;}
+.hero h1{font-size:40px;font-weight:900;color:#fff;line-height:1.08;letter-spacing:-.02em;margin:10px 0 14px;}
+.hero p{font-size:15.5px;color:#a7c2da;line-height:1.62;max-width:720px;}
+.hero p b{color:#fff;font-weight:600;}
 
-.lead{max-width:760px;}
-.lead .eb{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--mint);}
-.lead h1{font-size:46px;font-weight:900;letter-spacing:-.025em;color:#fff;line-height:1.05;margin:14px 0 16px;}
-.lead p{font-size:16.5px;color:var(--tx-dim);line-height:1.62;}
-.lead p b{color:#fff;font-weight:600;}
+/* ---------- Main ---------- */
+.main{padding:42px 52px 60px;flex:1;}
+.bhead{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.bhead .ix{font-size:12px;font-weight:800;color:var(--blue);background:#E6F1FD;padding:4px 9px;border-radius:6px;letter-spacing:.04em;text-transform:uppercase;}
+.bhead h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.01em;}
+.bhead p{font-size:13.5px;color:var(--muted);margin-top:3px;}
 
-.rule{height:1px;background:var(--line);margin:40px 0 30px;}
-.sechead{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--tx-dimmer);margin-bottom:20px;}
-
-/* compact report cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,440px));gap:24px;}
-.card{background:linear-gradient(150deg,var(--navy-3),var(--navy-2));border:1px solid var(--line);border-left:3px solid var(--blue-deep);border-radius:16px;padding:26px 28px;display:flex;flex-direction:column;box-shadow:0 18px 44px rgba(0,16,32,.45);}
-.card .tag{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);}
-.card h2{font-size:23px;font-weight:900;color:#fff;margin:8px 0 11px;letter-spacing:-.02em;line-height:1.14;}
-.card .desc{font-size:14px;color:var(--tx-dim);line-height:1.58;}
+/* ---------- Report cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,460px));gap:18px;}
+.card{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;}
+.card .tag{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);}
+.card h3{font-size:21px;font-weight:900;color:var(--ink);margin:8px 0 10px;letter-spacing:-.02em;line-height:1.16;}
+.card .desc{font-size:13.5px;color:var(--body);line-height:1.58;}
 .card .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px;}
-.card .chips span{font-size:11.5px;font-weight:600;color:var(--tx);background:var(--navy);border:1px solid var(--line);padding:5px 11px;border-radius:20px;}
-.card a.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--blue-deep);color:#fff;text-decoration:none;font-size:14.5px;font-weight:700;padding:13px 22px;border-radius:10px;transition:background .15s,transform .15s;margin-top:auto;}
+.card .chips span{font-size:11.5px;font-weight:600;color:var(--blue);background:#E6F1FD;border:1px solid rgba(5,123,229,.22);padding:5px 11px;border-radius:20px;}
+.card a.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--blue);color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:12px 22px;border-radius:10px;transition:background .15s,transform .15s;margin-top:auto;align-self:flex-start;}
 .card a.btn:hover{background:var(--blue-hover);transform:translateY(-1px);}
 
-@media(max-width:920px){
-  .top,.wrap{padding-left:26px;padding-right:26px;}
+/* ---------- Footer ---------- */
+.foot{padding:22px 52px;border-top:1px solid var(--divider);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);}
+.foot b{color:var(--ink);font-weight:700;}
+
+@media(max-width:900px){
+  .top,.hero,.main,.foot{padding-left:24px;padding-right:24px;}
   .cards{grid-template-columns:1fr;}
-  .lead h1{font-size:34px;}
+  .hero h1{font-size:31px;}
 }
 </style>
 </head>
 <body>
+<div class="shell">
 
-<div class="top">
-  <img src="assets/goal-wordmark-white.png" alt="GOAL">
-  <div class="r">Willard Insurance &middot; Account Hub</div>
-</div>
+  <div class="top">
+    <img src="assets/goal-wordmark-white.png" alt="GOAL">
+    <div class="r">Willard Insurance &middot; Account Hub</div>
+  </div>
 
-<div class="wrap">
-  <div class="lead">
-    <div class="eb">Account Landing Page &middot; Onboarding</div>
+  <div class="hero">
+    <div class="eb">Account Landing Page</div>
     <h1>Willard Insurance</h1>
-    <p>Your reporting hub on GOAL. Below are your current reports — the <b>Onboarding Recap &amp; Launch Plan</b> from kickoff and the <b>MO Non-Standard Auto Launch Plan</b> for your second campaign. Open any report full-size to read or print to PDF.</p>
+    <p>Your reporting hub on GOAL. Below are your current reports &mdash; the <b>MO Commercial Performance Review</b> covering the campaign&rsquo;s first three weeks, and the <b>MO Non-Standard Auto Launch Overview</b> for your second campaign. Open any report full-size to read or print to PDF.</p>
   </div>
 
-  <div class="rule"></div>
-  <div class="sechead">Reports</div>
+  <div class="main">
+    <div class="bhead"><span class="ix">Reports</span><div><h2>Current reports</h2><p>Prepared for Weston Willard &middot; Account #958 &middot; Tom Panos</p></div></div>
 
-  <div class="cards">
-    <div class="card">
-      <div class="tag">Report &middot; May 2026</div>
-      <h2>Onboarding Recap &amp; Launch Plan</h2>
-      <div class="desc">The full launch plan — snapshot, phased rollout, the two live/staged campaigns with settings and schedule, the roadmap, the 0–90 day metrics framework, and what each of us owns next. Account #958 &middot; Tom Panos.</div>
-      <div class="chips">
-        <span>Phased rollout</span><span>Campaign cards</span><span>Action plan</span>
+    <div class="cards">
+      <div class="card">
+        <div class="tag">Performance Review &middot; June 2026</div>
+        <h3>MO Commercial Performance Review</h3>
+        <div class="desc">The first performance read on the Missouri Commercial campaign, May 22 &ndash; June 10: 60 leads &amp; calls, 5 policies bound at a $169.86 cost per policy, the full source-by-source breakdown, the conversion funnel, and the five bid updates going live June 10.</div>
+        <div class="chips">
+          <span>Key metrics</span><span>Source performance</span><span>Bid updates</span>
+        </div>
+        <a class="btn" href="reports/mo-commercial-performance-review.html">Open report &rarr;</a>
       </div>
-      <a class="btn" href="reports/onboarding-recap-and-launch-plan.html">Open report &rarr;</a>
-    </div>
-    <div class="card">
-      <div class="tag">Report &middot; June 2026</div>
-      <h2>MO Non-Standard Auto Launch Plan</h2>
-      <div class="desc">The launch plan for your second GOAL campaign — statewide non-standard auto targeting (uninsured, SR-22, DUI), the recommended bids and budget, the channel approach, and the 0–90 day measurement plan. Account #958 &middot; Tom Panos.</div>
-      <div class="chips">
-        <span>Targeting &amp; bids</span><span>Channel plan</span><span>0–90 day metrics</span>
+      <div class="card">
+        <div class="tag">Launch Overview &middot; June 2026</div>
+        <h3>MO Non-Standard Auto Launch Overview</h3>
+        <div class="desc">Your second GOAL campaign, configured and ready to launch &mdash; statewide targeting of uninsured and SR-22 drivers, bid weighting by shopper profile, channel-by-channel bids against Missouri market pricing, the schedule and lead delivery setup, and the 0&ndash;90 day measurement plan.</div>
+        <div class="chips">
+          <span>Audience &amp; bids</span><span>Traffic channels</span><span>Measurement plan</span>
+        </div>
+        <a class="btn" href="reports/mo-non-standard-auto-launch-overview.html">Open report &rarr;</a>
       </div>
-      <a class="btn" href="reports/Willard%20Insurance%20-%20MO%20Non-Standard%20Auto%20Launch%20Plan.html">Open report &rarr;</a>
     </div>
   </div>
+
+  <div class="foot">
+    <div><b>GOAL</b> &middot; Performance Marketing for Insurance Agencies</div>
+    <div>Prepared for Willard Insurance &middot; Account #958 &middot; Updated before each review</div>
+  </div>
+
 </div>
-
 </body>
 </html>
