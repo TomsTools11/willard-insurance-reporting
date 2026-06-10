@@ -115,6 +115,22 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
 .opnote{margin-top:16px;font-size:13px;color:var(--muted);}
 .opnote b{color:var(--ink);font-weight:700;}
 
+/* Ad creative */
+.adstack{display:flex;flex-direction:column;gap:18px;}
+.adtag{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;display:inline-block;padding:4px 10px;border-radius:6px;margin-bottom:9px;}
+.adtag.orig{background:var(--gray);color:var(--muted);}
+.adtag.rev{background:#E6F1FD;color:var(--blue);}
+.adcard{border:1px solid var(--line);border-radius:14px;background:var(--white);padding:26px 30px;display:flex;align-items:center;gap:30px;}
+.adcard .brand{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:5px;width:108px;}
+.adcard .stars{font-size:14px;letter-spacing:2px;}
+.adcard .copy{flex:1;}
+.adcard .copy h3{font-size:17px;font-weight:800;color:var(--ink);line-height:1.32;margin-bottom:10px;letter-spacing:-.01em;max-width:340px;}
+.adcard ul{list-style:none;}
+.adcard li{font-size:13px;color:var(--body);padding:3px 0;display:flex;gap:9px;align-items:baseline;}
+.adcard li .ck{font-weight:900;flex-shrink:0;color:var(--sky);}
+.adcard li.new{background:#E6F1FD;border-radius:6px;padding:3px 9px;margin-left:-9px;}
+.adcard .cta{flex-shrink:0;align-self:flex-start;color:#fff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:8px;white-space:nowrap;}
+
 /* Recommendations */
 .plan{border:1px solid var(--line);border-radius:14px;overflow:hidden;}
 .pstep{display:flex;gap:18px;padding:20px 24px;border-top:1px solid var(--divider);background:var(--white);}
@@ -127,7 +143,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
   body{background:#fff;} .shell{display:block;max-width:none;}
   .side{position:static;height:auto;flex-direction:row;align-items:center;justify-content:space-between;padding:20px 30px;}
   .side nav,.side .foot,.side .back{display:none;} .side h1{margin:0;}
-  .kc,.panel,.plan,.sched,.cad4{break-inside:avoid;}
+  .kc,.panel,.plan,.sched,.cad4,.adcard{break-inside:avoid;}
+  .adcard li.new,.adtag{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
 }
 @media(max-width:900px){
   .shell{grid-template-columns:1fr;}
@@ -138,6 +155,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
   .split{grid-template-columns:1fr;}
   .sched{grid-template-columns:repeat(4,1fr);}
   .dlv,.cad4{grid-template-columns:1fr;}
+  .adcard{flex-direction:column;align-items:flex-start;gap:18px;}
 }
 @media(max-width:560px){ .kgrid{grid-template-columns:1fr;} .fstep .lab{width:120px;} .sched{grid-template-columns:repeat(2,1fr);} }
 </style>
@@ -157,7 +175,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
       <a href="#s3"><span class="dot"></span>Traffic channels</a>
       <a href="#s4"><span class="dot"></span>Schedule &amp; delivery</a>
       <a href="#s5"><span class="dot"></span>Measurement plan</a>
-      <a href="#s6"><span class="dot"></span>Recommendations</a>
+      <a href="#s6"><span class="dot"></span>Ad creative</a>
+      <a href="#s7"><span class="dot"></span>Recommendations</a>
     </nav>
     <div class="foot">GOAL Performance Marketing<br>All conversion metrics calculated based on Leads, not Clicks.</div>
   </aside>
@@ -262,11 +281,64 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
       <div class="opnote">Operating cadence: bid reviews <b>every other day</b> · market re-price <b>every two weeks</b> · account reviews <b>biweekly, Tuesday 2:00 PM CT</b>.</div>
     </section>
 
-    <section class="block" id="s6" style="margin-bottom:0;">
-      <div class="bhead"><span class="ix">06</span><div><h2>Recommendations</h2></div></div>
+    <section class="block" id="s6">
+      <div class="bhead"><span class="ix">06</span><div><h2>Ad creative</h2><p>Original vs. revised ad copy &middot; revised June 10, 2026</p></div></div>
+      <div class="adstack">
+        <div>
+          <span class="adtag orig">Original</span>
+          <div class="adcard">
+            <div class="brand">
+              <svg width="86" height="58" viewBox="0 0 86 58" aria-hidden="true">
+                <line x1="0" y1="27" x2="77" y2="27" stroke="#2A2F8F" stroke-width="3"/>
+                <polygon points="75,21 86,27 75,33" fill="#2A2F8F"/>
+                <text x="43" y="48" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="900" font-size="50" fill="#5B50E3">W</text>
+              </svg>
+              <div class="stars" style="color:#E8E335;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="copy">
+              <h3>Save on Auto Insurance with Willard Insurance</h3>
+              <ul>
+                <li><span class="ck">&#10003;</span>Willard Insurance proudly serving local drivers</li>
+                <li><span class="ck">&#10003;</span>Are you paying too much for auto insurance? Find out with a free quote</li>
+                <li><span class="ck">&#10003;</span>Compare rates and see how much you can save instantly</li>
+                <li><span class="ck">&#10003;</span>Take advantage of multiple discounts &amp; bundling options</li>
+              </ul>
+            </div>
+            <span class="cta" style="background:#6D7FE8;">Get Rate &#9656;</span>
+          </div>
+        </div>
+        <div>
+          <span class="adtag rev">Revised</span>
+          <div class="adcard">
+            <div class="brand">
+              <svg width="86" height="58" viewBox="0 0 86 58" aria-hidden="true">
+                <line x1="0" y1="27" x2="77" y2="27" stroke="#0A3A6B" stroke-width="3"/>
+                <polygon points="75,21 86,27 75,33" fill="#0A3A6B"/>
+                <text x="43" y="48" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="900" font-size="50" fill="#2D90EE">W</text>
+              </svg>
+              <div class="stars" style="color:#F5C24B;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="copy">
+              <h3>Need Auto Insurance? Get Covered Today with Willard Insurance</h3>
+              <ul>
+                <li class="new"><span class="ck">&#10003;</span>No current insurance? No problem. Missouri drivers welcome</li>
+                <li class="new"><span class="ck">&#10003;</span>Tickets, accidents, or a DUI? We&rsquo;ve got you covered.</li>
+                <li><span class="ck">&#10003;</span>Compare rates and see how much you can save instantly</li>
+                <li class="new"><span class="ck">&#10003;</span>Call today and get your quote</li>
+              </ul>
+            </div>
+            <span class="cta" style="background:#057BE5;">Get Rate &#9656;</span>
+          </div>
+        </div>
+      </div>
+      <div class="opnote">Highlighted lines are new in the revised ad. The headline now leads with <b>getting covered</b> rather than saving, the copy speaks directly to <b>uninsured and high-risk shoppers</b> (tickets, accidents, DUI), and it closes with a <b>call prompt</b> &mdash; matching the audience the campaign is priced for.</div>
+    </section>
+
+    <section class="block" id="s7" style="margin-bottom:0;">
+      <div class="bhead"><span class="ix">07</span><div><h2>Recommendations</h2></div></div>
       <div class="plan">
         <div class="pstep"><div class="num">1</div><div><div class="h">Confirm the go-live date</div><div class="b">The campaign is fully configured and activates the same day the date is confirmed.</div></div></div>
-        <div class="pstep"><div class="num">2</div><div><div class="h">Ad creative updates before launch</div><div class="b">We are updating the ad to non-standard messaging — no-current-coverage, SR-22 filing, and a call prompt — so the ad reaches the shoppers the campaign is priced for.</div></div></div>
+        <div class="pstep"><div class="num">2</div><div><div class="h">Ad creative updated for launch</div><div class="b">The ad copy has been revised to non-standard messaging — no current coverage, tickets/accidents/DUI, and a call prompt — so the ad reaches the shoppers the campaign is priced for. Section 06 shows the original and revised versions.</div></div></div>
         <div class="pstep"><div class="num">3</div><div><div class="h">Respond to new leads within 5 minutes</div><div class="b">Contact rates fall sharply after the first few minutes. Uninsured shoppers typically purchase the same day; a text after a missed call raises callback rates.</div></div></div>
         <div class="pstep"><div class="num">4</div><div><div class="h">Export disposition data ahead of each review</div><div class="b">Contact, quote, and bind statuses from AgencyZoom feed the bid adjustments by channel and shopper profile at each biweekly review.</div></div></div>
       </div>
