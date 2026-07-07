@@ -12,6 +12,7 @@ dashboard template (navy sidebar, numbered sections, light content shell).
 ├── index.html                                      # Landing page (Account Hub)
 ├── reports/
 │   ├── mo-commercial-performance-review.html       # MO Commercial Performance Review (May 22 – Jul 7, 2026)
+│   ├── mo-inbound-call-performance.html            # MO Inbound Call Performance (May 24 – Jul 6, 2026)
 │   └── mo-non-standard-auto-launch-overview.html   # MO Non-Standard Auto Launch Overview
 ├── assets/                                         # GOAL brand marks (logos, favicon)
 │   ├── goal-mark.png
@@ -54,6 +55,7 @@ Routes once deployed:
 
 - `/` → landing page
 - `/reports/mo-commercial-performance-review.html` → MO Commercial Performance Review
+- `/reports/mo-inbound-call-performance.html` → MO Inbound Call Performance
 - `/reports/mo-non-standard-auto-launch-overview.html` → MO Non-Standard Auto Launch Overview
 
 ### Configuration notes
