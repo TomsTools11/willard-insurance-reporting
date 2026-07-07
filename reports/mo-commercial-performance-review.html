@@ -32,9 +32,9 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
 .side nav a:hover{background:rgba(255,255,255,.06);color:#fff;text-decoration:none;}
 .side nav a .dot{width:6px;height:6px;border-radius:50%;background:#3a6386;flex-shrink:0;}
 .side nav a:hover .dot{background:var(--mint);}
-.side .foot{margin-top:auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;color:#6f93b3;line-height:1.6;}
 .side .back{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:#9fbcd6;text-decoration:none;border:1px solid rgba(255,255,255,.18);padding:7px 13px;border-radius:8px;margin-bottom:28px;transition:color .15s,border-color .15s;}
 .side .back:hover{color:#fff;border-color:rgba(255,255,255,.4);}
+.side .foot{margin-top:auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;color:#6f93b3;line-height:1.6;}
 
 /* ---------- Main ---------- */
 .main{padding:46px 52px 60px;}
@@ -128,15 +128,16 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
 @media(max-width:560px){ .kgrid{grid-template-columns:1fr;} .fstep .lab{width:96px;} }
 </style>
 </head>
+
 <body>
 <div class="shell" data-screen-label="Dashboard report">
 
   <aside class="side">
-    <a class="back" href="../index.html">&larr; All Reports</a>
     <img class="logo" src="../assets/goal-wordmark-white.png" alt="GOAL">
+    <a class="back" href="../index.html">&larr; All Reports</a>
     <div class="eb">Performance Review</div>
     <h1>Willard Insurance</h1>
-    <div class="who">Prepared for <b>Weston Willard</b><br>Missouri &middot; Commercial<br>May 22 &ndash; June 10, 2026</div>
+    <div class="who">Prepared for <b>Weston Willard</b><br>Missouri &middot; Commercial<br>May 22 &ndash; July 7, 2026</div>
     <nav>
       <a href="#s1"><span class="dot"></span>Key metrics</a>
       <a href="#s2"><span class="dot"></span>Performance by source</a>
@@ -149,23 +150,23 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
   <main class="main">
 
     <div class="exec">
-      <p>The Missouri Commercial campaign launched May 22. Through June 10 it produced <b>60 leads and calls</b> from 66 ad clicks at an average ad position of 2.07. Of those, 24 were contacted, 13 quoted, and <b>5 policies bound</b> at a cost per policy of <b>$169.86</b>. We are making five source-bid updates calibrated to current first-position market pricing; details are in section 04.</p>
+      <p>The Missouri Commercial campaign launched May 22. Through July 7 it produced <b>172 leads and calls</b> from 214 ad clicks at an average ad position of 1.83. Of those, 54 were contacted, 40 quoted, and <b>15 policies bound</b> at a cost per policy of <b>$185.87</b>. We are adjusting source bids to current first-position market pricing and holding the base bid; details are in section 04.</p>
     </div>
 
     <section class="block" id="s1">
-      <div class="bhead"><span class="ix">01</span><div><h2>Key metrics</h2><p>May 22 &ndash; June 10, 2026</p></div></div>
+      <div class="bhead"><span class="ix">01</span><div><h2>Key metrics</h2><p>May 22 &ndash; July 7, 2026</p></div></div>
       <div class="kgrid">
-        <div class="kc"><div class="v">60</div><div class="k">Leads &amp; calls</div><div class="d">47 leads &middot; 13 inbound calls</div></div>
-        <div class="kc"><div class="v">5</div><div class="k">Policies bound</div><div class="d">from 13 quotes</div></div>
-        <div class="kc"><div class="v">$169.86</div><div class="k">CPA &middot; cost per policy</div><div class="d">$849.29 total spend &divide; 5 policies</div></div>
-        <div class="kc"><div class="v">40.0%</div><div class="k">Contact rate</div><div class="d">24 of 60 leads &amp; calls</div></div>
-        <div class="kc"><div class="v">21.7%</div><div class="k">Quote rate</div><div class="d">13 of 60 leads &amp; calls</div></div>
-        <div class="kc"><div class="v">2.07</div><div class="k">Average ad position</div><div class="d">across 90 ad impressions</div></div>
+        <div class="kc"><div class="v">172</div><div class="k">Leads &amp; calls</div><div class="d">146 leads &middot; 26 inbound calls</div></div>
+        <div class="kc"><div class="v">15</div><div class="k">Policies bound</div><div class="d">from 40 quotes</div></div>
+        <div class="kc"><div class="v">$185.87</div><div class="k">CPA &middot; cost per policy</div><div class="d">$2,787.99 total spend &divide; 15 policies</div></div>
+        <div class="kc"><div class="v">31.4%</div><div class="k">Contact rate</div><div class="d">54 of 172 leads &amp; calls</div></div>
+        <div class="kc"><div class="v">23.3%</div><div class="k">Quote rate</div><div class="d">40 of 172 leads &amp; calls</div></div>
+        <div class="kc"><div class="v">1.83</div><div class="k">Average ad position</div><div class="d">across 325 ad impressions</div></div>
       </div>
     </section>
 
     <section class="block" id="s2">
-      <div class="bhead"><span class="ix">02</span><div><h2>Performance by source</h2><p>May 22 &ndash; June 10, 2026</p></div></div>
+      <div class="bhead"><span class="ix">02</span><div><h2>Performance by source</h2><p>May 22 &ndash; July 7, 2026</p></div></div>
       <div class="split">
         <div class="panel">
           <div class="pt">Lead &amp; call mix</div>
@@ -173,56 +174,56 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
             <div class="donut">
               <svg viewBox="0 0 42 42" width="180" height="180">
                 <circle cx="21" cy="21" r="15.915" fill="none" stroke="#EFF2F7" stroke-width="6"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#057BE5" stroke-width="6" stroke-dasharray="0 100" data-dash="26.7" transform="rotate(-90 21 21)"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#2D90EE" stroke-width="6" stroke-dasharray="0 100" data-dash="25.0" data-offset="26.7" transform="rotate(-90 21 21)"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#0c5fb0" stroke-width="6" stroke-dasharray="0 100" data-dash="21.7" data-offset="51.7" transform="rotate(-90 21 21)"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#F0A93B" stroke-width="6" stroke-dasharray="0 100" data-dash="10.0" data-offset="73.4" transform="rotate(-90 21 21)"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#9cc4ec" stroke-width="6" stroke-dasharray="0 100" data-dash="10.0" data-offset="83.4" transform="rotate(-90 21 21)"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#0fae8f" stroke-width="6" stroke-dasharray="0 100" data-dash="6.6" data-offset="93.4" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#057BE5" stroke-width="6" stroke-dasharray="0 100" data-dash="36.0" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#2D90EE" stroke-width="6" stroke-dasharray="0 100" data-dash="29.7" data-offset="36.0" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#0c5fb0" stroke-width="6" stroke-dasharray="0 100" data-dash="20.3" data-offset="65.7" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#9cc4ec" stroke-width="6" stroke-dasharray="0 100" data-dash="6.4" data-offset="86.0" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#0fae8f" stroke-width="6" stroke-dasharray="0 100" data-dash="4.1" data-offset="92.4" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="#F0A93B" stroke-width="6" stroke-dasharray="0 100" data-dash="3.5" data-offset="96.5" transform="rotate(-90 21 21)"></circle>
               </svg>
-              <div class="center"><div class="n">60</div><div class="l">leads &amp; calls</div></div>
+              <div class="center"><div class="n">172</div><div class="l">leads &amp; calls</div></div>
             </div>
             <div class="legend">
-              <div class="li"><span class="sw" style="background:#057BE5"></span><span class="nm">Benepath - Google Search</span><span class="vl">16</span></div>
-              <div class="li"><span class="sw" style="background:#2D90EE"></span><span class="nm">Premium Referral</span><span class="vl">15</span></div>
-              <div class="li"><span class="sw" style="background:#0c5fb0"></span><span class="nm">Benepath - Social</span><span class="vl">13</span></div>
+              <div class="li"><span class="sw" style="background:#057BE5"></span><span class="nm">Premium Referral</span><span class="vl">62</span></div>
+              <div class="li"><span class="sw" style="background:#2D90EE"></span><span class="nm">Benepath - Google Search</span><span class="vl">51</span></div>
+              <div class="li"><span class="sw" style="background:#0c5fb0"></span><span class="nm">Benepath - Social</span><span class="vl">35</span></div>
+              <div class="li"><span class="sw" style="background:#9cc4ec"></span><span class="nm">Internal SEO</span><span class="vl">11</span></div>
+              <div class="li"><span class="sw" style="background:#0fae8f"></span><span class="nm">Email</span><span class="vl">7</span></div>
               <div class="li"><span class="sw" style="background:#F0A93B"></span><span class="nm">Benepath - Paid Search</span><span class="vl">6</span></div>
-              <div class="li"><span class="sw" style="background:#9cc4ec"></span><span class="nm">Internal SEO</span><span class="vl">6</span></div>
-              <div class="li"><span class="sw" style="background:#0fae8f"></span><span class="nm">Email</span><span class="vl">4</span></div>
             </div>
           </div>
         </div>
         <div class="panel">
           <table class="ltable">
-            <thead><tr><th>Source</th><th class="r">Leads</th><th class="r">Calls</th><th class="r">Contacted</th><th class="r">Quoted</th><th class="r">Bound</th><th class="r">Spend</th></tr></thead>
+            <thead><tr><th>Source</th><th class="r">Leads</th><th class="r">Calls</th><th class="r">Win rate</th><th class="r">Avg pos</th><th class="r">Spend</th></tr></thead>
             <tbody>
               <tr>
-                <td><div class="nm"><span class="bd" style="background:#057BE5"></span>Benepath - Google Search</div></td>
-                <td class="r num">10</td><td class="r num">6</td><td class="r num">6</td><td class="r num">2</td><td class="r num">0</td><td class="r mut">$187.33</td>
+                <td><div class="nm"><span class="bd" style="background:#057BE5"></span>Premium Referral</div></td>
+                <td class="r num">57</td><td class="r num">5</td><td class="r num">57.1%</td><td class="r num">1.68</td><td class="r mut">$1,035.92</td>
               </tr>
               <tr>
-                <td><div class="nm"><span class="bd" style="background:#2D90EE"></span>Premium Referral</div></td>
-                <td class="r num">14</td><td class="r num">1</td><td class="r num">2</td><td class="r num">1</td><td class="r num">0</td><td class="r mut">$245.02</td>
+                <td><div class="nm"><span class="bd" style="background:#2D90EE"></span>Benepath - Google Search</div></td>
+                <td class="r num">39</td><td class="r num">12</td><td class="r num">37.1%</td><td class="r num">1.97</td><td class="r mut">$735.49</td>
               </tr>
               <tr>
                 <td><div class="nm"><span class="bd" style="background:#0c5fb0"></span>Benepath - Social</div></td>
-                <td class="r num">10</td><td class="r num">3</td><td class="r num">5</td><td class="r num">4</td><td class="r num">2</td><td class="r mut">$226.79</td>
-              </tr>
-              <tr>
-                <td><div class="nm"><span class="bd" style="background:#F0A93B"></span>Benepath - Paid Search</div></td>
-                <td class="r num">4</td><td class="r num">2</td><td class="r num">4</td><td class="r num">2</td><td class="r num">1</td><td class="r mut">$30.04</td>
+                <td class="r num">31</td><td class="r num">4</td><td class="r num">59.2%</td><td class="r num">1.30</td><td class="r mut">$647.55</td>
               </tr>
               <tr>
                 <td><div class="nm"><span class="bd" style="background:#9cc4ec"></span>Internal SEO</div></td>
-                <td class="r num">5</td><td class="r num">1</td><td class="r num">4</td><td class="r num">3</td><td class="r num">2</td><td class="r mut">$97.56</td>
+                <td class="r num">8</td><td class="r num">3</td><td class="r num">48.1%</td><td class="r num">1.81</td><td class="r mut">$211.38</td>
               </tr>
               <tr>
                 <td><div class="nm"><span class="bd" style="background:#0fae8f"></span>Email</div></td>
-                <td class="r num">4</td><td class="r num">0</td><td class="r num">3</td><td class="r num">1</td><td class="r num">0</td><td class="r mut">$50.04</td>
+                <td class="r num">7</td><td class="r num">0</td><td class="r num">1.1%</td><td class="r num">1.69</td><td class="r mut">$100.08</td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:#F0A93B"></span>Benepath - Paid Search</div></td>
+                <td class="r num">4</td><td class="r num">2</td><td class="r num">6.7%</td><td class="r num">3.44</td><td class="r mut">$45.06</td>
               </tr>
               <tr>
                 <td><div class="nm"><span class="bd" style="background:#6A7482"></span>Benepath - Premium Referral</div></td>
-                <td class="r num">0</td><td class="r num">0</td><td class="r num">0</td><td class="r num">0</td><td class="r num">0</td><td class="r mut">$12.51</td>
+                <td class="r num">0</td><td class="r num">0</td><td class="r num">25.0%</td><td class="r num">1.25</td><td class="r mut">$12.51</td>
               </tr>
             </tbody>
           </table>
@@ -231,37 +232,36 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
     </section>
 
     <section class="block" id="s3">
-      <div class="bhead"><span class="ix">03</span><div><h2>Conversion funnel</h2><p>May 22 &ndash; June 10, 2026</p></div></div>
+      <div class="bhead"><span class="ix">03</span><div><h2>Conversion funnel</h2><p>May 22 &ndash; July 7, 2026</p></div></div>
       <div class="fpanel">
-        <div class="fstep"><div class="lab">Ad shown<small>impressions</small></div><div class="fbar"><i style="background:#9cc4ec" data-w="100">90</i></div><div class="pct">&mdash;</div></div>
-        <div class="fstep"><div class="lab">Clicked<small>to quote form</small></div><div class="fbar"><i style="background:#3a92e0" data-w="73">66</i></div><div class="pct">73.3%</div></div>
-        <div class="fstep"><div class="lab">Lead or call<small>submitted</small></div><div class="fbar"><i style="background:#057BE5" data-w="67">60</i></div><div class="pct">90.9%</div></div>
-        <div class="fstep"><div class="lab">Contacted<small>reached</small></div><div class="fbar"><i style="background:#0c5fb0" data-w="27">24</i></div><div class="pct">40.0%</div></div>
-        <div class="fstep"><div class="lab">Quoted<small>presented</small></div><div class="fbar"><i style="background:#0a3a6b" data-w="14">13</i></div><div class="pct">54.2%</div></div>
-        <div class="fstep"><div class="lab">Policy bound<small>sold</small></div><div class="fbar"><i style="background:#0fae8f;color:#062b4e" data-w="6">5</i></div><div class="pct">38.5%</div></div>
-        <div class="fnote">Percentages show conversion from the prior stage. Shoppers click the ad 73.3% of the time it is shown; 90.9% of clicks become a lead or a call. Cost per policy: <b>$849.29 &divide; 5 = $169.86</b>.</div>
+        <div class="fstep"><div class="lab">Ad shown<small>impressions</small></div><div class="fbar"><i style="background:#9cc4ec" data-w="100">325</i></div><div class="pct">&mdash;</div></div>
+        <div class="fstep"><div class="lab">Clicked<small>to quote form</small></div><div class="fbar"><i style="background:#3a92e0" data-w="66">214</i></div><div class="pct">65.8%</div></div>
+        <div class="fstep"><div class="lab">Lead or call<small>submitted</small></div><div class="fbar"><i style="background:#057BE5" data-w="53">172</i></div><div class="pct">80.4%</div></div>
+        <div class="fstep"><div class="lab">Contacted<small>reached</small></div><div class="fbar"><i style="background:#0c5fb0" data-w="17">54</i></div><div class="pct">31.4%</div></div>
+        <div class="fstep"><div class="lab">Quoted<small>presented</small></div><div class="fbar"><i style="background:#0a3a6b" data-w="12">40</i></div><div class="pct">74.1%</div></div>
+        <div class="fstep"><div class="lab">Policy bound<small>sold</small></div><div class="fbar"><i style="background:#0fae8f;color:#062b4e" data-w="5">15</i></div><div class="pct">37.5%</div></div>
+        <div class="fnote">Percentages show conversion from the prior stage. Shoppers click the ad 65.8% of the time it is shown; 80.4% of clicks become a lead or a call. Cost per policy: <b>$2,787.99 &divide; 15 = $185.87</b>. Contacted, quoted, and bound counts are sourced from the AgencyZoom disposition export dated July 7.</div>
       </div>
     </section>
 
     <section class="block" id="s4" style="margin-bottom:0;">
-      <div class="bhead"><span class="ix">04</span><div><h2>Recommendations</h2><p>Effective June 10, 2026</p></div></div>
+      <div class="bhead"><span class="ix">04</span><div><h2>Recommendations</h2><p>Effective July 7, 2026</p></div></div>
       <div class="plan">
         <div class="pstep"><div class="num">1</div><div style="flex:1;">
-          <div class="h">Raise three source bids to first-position market price</div>
-          <div class="b">These sources are bidding below the current first-position market price for Missouri commercial traffic. We are raising each to clear first position with a 5&ndash;10% buffer.</div>
+          <div class="h">Raise two source bids to first-position market price</div>
+          <div class="b">These sources are bidding below the current first-position market price for Missouri commercial traffic. We are raising each to clear first position with a small buffer.</div>
           <table class="btable">
             <thead><tr><th>Source</th><th class="r">Win rate</th><th class="r">Market 1st-position price</th><th class="r">Current bid</th><th class="r">New bid</th></tr></thead>
             <tbody>
-              <tr><td class="src">Benepath - Google Search<small>most inbound calls: 6</small></td><td class="r">32.5%</td><td class="r">$17.23</td><td class="r mut">$15.01 &middot; 120%</td><td class="r to">$18.77 &middot; 150%</td></tr>
-              <tr><td class="src">Benepath - Paid Search<small>lowest cost per policy: $30.04</small></td><td class="r">14.29%</td><td class="r">$11.29</td><td class="r mut">$7.51 &middot; 60%</td><td class="r to">$12.51 &middot; 100%</td></tr>
-              <tr><td class="src">Internal SEO<small>2 policies bound at $48.78 each</small></td><td class="r">46.15%</td><td class="r">$16.88</td><td class="r mut">$16.26 &middot; 130%</td><td class="r to">$18.14 &middot; 145%</td></tr>
+              <tr><td class="src">Benepath - Paid Search<small>lowest cost per policy in sample</small></td><td class="r">6.7%</td><td class="r">$11.03</td><td class="r mut">$7.51 &middot; 60%</td><td class="r to">$11.26 &middot; 90%</td></tr>
+              <tr><td class="src">Internal SEO<small>highest quote-to-bind rate</small></td><td class="r">48.1%</td><td class="r">$17.20</td><td class="r mut">$16.26 &middot; 130%</td><td class="r to">$17.26 &middot; 138%</td></tr>
             </tbody>
           </table>
         </div></div>
-        <div class="pstep"><div class="num">2</div><div><div class="h">Raise the Email source bid from 100% to 105%</div><div class="b">Email holds <b>518 of the campaign&rsquo;s 865 qualified opportunities (60%)</b> and won 1.49% of its auctions to date. The new bid is $13.14 against an $11.56 first-position market price. We will review its win rate at the June 17 checkpoint.</div></div></div>
-        <div class="pstep"><div class="num">3</div><div><div class="h">Reduce the Premium Referral bid from 90% to 75%</div><div class="b">The current $11.26 bid is 36% above the source&rsquo;s $8.28 first-position market price, and 2 of its 15 leads and calls have been contacted to date. The new $9.38 bid still clears first position by 13%; the difference funds the increases above.</div></div></div>
-        <div class="pstep"><div class="num">4</div><div><div class="h">Hold Benepath - Social and the base bid unchanged</div><div class="b">Benepath - Social stays at 115% ($14.39): it is 6% above its $13.56 first-position price with a 48.48% win rate and 2 policies bound. All updates above run through source multipliers; the $12.51 base bid is unchanged.</div></div></div>
-        <div class="pstep"><div class="num">5</div><div><div class="h">Review bid results and budget pacing on June 17</div><div class="b">The daily budget stays at $75 with the 7-per-day lead cap. Spend through June 10 is $849.29. If daily spend reaches the budget cap before the lead cap after these updates, we raise the daily budget to $90.</div></div></div>
+        <div class="pstep"><div class="num">2</div><div><div class="h">Reduce the Premium Referral bid from 90% to 85%</div><div class="b">The current $11.26 bid is 6.9% above the source&rsquo;s $10.54 first-position market price. Premium Referral holds 361 of the campaign&rsquo;s qualified opportunities and 62 of 172 leads and calls (36%), with 2 of 57 leads contacted to date. The new $10.63 bid still clears first position; the difference funds the increases above.</div></div></div>
+        <div class="pstep"><div class="num">3</div><div><div class="h">Hold Benepath - Google Search and Benepath - Social unchanged</div><div class="b">Benepath - Google Search stays at 120% ($15.01), at its $15.23 first-position price with a 37.1% win rate and the highest bound volume. Benepath - Social stays at 115% ($14.39), 1.3% above its $14.20 first-position price with a 59.2% win rate. The $12.51 base bid is unchanged; all updates run through source multipliers.</div></div></div>
+        <div class="pstep"><div class="num">4</div><div><div class="h">Hold Email at 100% and review source relevance</div><div class="b">Email holds <b>1,302 of the campaign&rsquo;s qualified opportunities</b> and won 1.1% of its auctions at a $12.51 bid against a $13.73 first-position price. We are holding the bid and reviewing source relevance before adding spend.</div></div></div>
+        <div class="pstep"><div class="num">5</div><div><div class="h">Budget pacing</div><div class="b">The daily budget is $75 and reached its cap on July 1, 2, and 6. Spend since launch is $2,787.99. A daily budget increase to $90 is available to expand volume.</div></div></div>
       </div>
     </section>
 
