@@ -93,6 +93,24 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
 .fnote{font-size:13px;color:var(--muted);line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid var(--divider);}
 .fnote b{color:var(--ink);font-weight:700;}
 
+/* ---------- Comparison: calls vs. regular leads ---------- */
+.cmp-legend{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--divider);}
+.cmp-legend .ci{display:flex;align-items:center;gap:9px;}
+.cmp-legend .ci .sw{width:11px;height:11px;border-radius:3px;flex-shrink:0;margin-top:1px;}
+.cmp-legend .ci .tx{font-size:13px;font-weight:700;color:var(--ink);}
+.cmp-legend .ci small{display:block;font-weight:500;color:var(--muted);font-size:11px;margin-top:1px;}
+.cmp-row{margin-bottom:22px;}
+.cmp-row:last-child{margin-bottom:0;}
+.cmp-lab{font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.cmp-lab small{display:block;font-weight:500;color:var(--muted);font-size:11.5px;margin-top:1px;}
+.cmp-bar-row{display:flex;align-items:center;gap:12px;margin-bottom:7px;}
+.cmp-bar-row:last-child{margin-bottom:0;}
+.cmp-track{flex:1;height:20px;background:var(--gray);border-radius:6px;overflow:hidden;max-width:420px;}
+.cmp-fill{height:100%;border-radius:6px;min-width:3px;transition:width 1.1s cubic-bezier(.2,.7,.2,1);width:0;}
+.cmp-val{width:60px;flex-shrink:0;font-size:13px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;}
+.cmp-note{font-size:13px;color:var(--muted);line-height:1.6;margin-top:6px;padding-top:16px;border-top:1px solid var(--divider);}
+.cmp-note b{color:var(--ink);font-weight:700;}
+
 /* ---------- Recommendations ---------- */
 .plan{border:1px solid var(--line);border-radius:14px;overflow:hidden;}
 .pstep{display:flex;gap:18px;padding:20px 24px;border-top:1px solid var(--divider);background:var(--white);}
@@ -131,7 +149,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
       <a href="#s1"><span class="dot"></span>Key metrics</a>
       <a href="#s2"><span class="dot"></span>Answer performance</a>
       <a href="#s3"><span class="dot"></span>Call funnel</a>
-      <a href="#s4"><span class="dot"></span>Recommendations</a>
+      <a href="#s4"><span class="dot"></span>Calls vs. regular leads</a>
+      <a href="#s5"><span class="dot"></span>Recommendations</a>
     </nav>
     <div class="foot">GOAL Performance Marketing<br>Inbound call metrics, May 24 &ndash; July 6, 2026.</div>
   </aside>
@@ -219,13 +238,45 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
       </div>
     </section>
 
-    <section class="block" id="s4" style="margin-bottom:0;">
-      <div class="bhead"><span class="ix">04</span><div><h2>Recommendations</h2></div></div>
+    <section class="block" id="s4">
+      <div class="bhead"><span class="ix">04</span><div><h2>Calls vs. regular leads</h2><p>Inbound call quality against the broader MO Commercial lead flow</p></div></div>
+      <div class="panel">
+        <div class="pt">Conversion rate by touch type</div>
+        <div class="cmp-legend">
+          <div class="ci"><span class="sw" style="background:#057BE5"></span><div><div class="tx">Inbound calls</div><small>Agency phone line &middot; May 24&ndash;Jul 6</small></div></div>
+          <div class="ci"><span class="sw" style="background:#0fae8f"></span><div><div class="tx">Regular leads &amp; calls</div><small>MO Commercial campaign &middot; May 22&ndash;Jul 7</small></div></div>
+        </div>
+
+        <div class="cmp-row">
+          <div class="cmp-lab">Reached a quote<small>share of all touches that got a quote presented</small></div>
+          <div class="cmp-bar-row"><div class="cmp-track"><div class="cmp-fill" style="background:#057BE5" data-w="65.6"></div></div><div class="cmp-val">65.6%</div></div>
+          <div class="cmp-bar-row"><div class="cmp-track"><div class="cmp-fill" style="background:#0fae8f" data-w="23.3"></div></div><div class="cmp-val">23.3%</div></div>
+        </div>
+
+        <div class="cmp-row">
+          <div class="cmp-lab">Bound a policy<small>share of all touches that closed</small></div>
+          <div class="cmp-bar-row"><div class="cmp-track"><div class="cmp-fill" style="background:#057BE5" data-w="6.25"></div></div><div class="cmp-val">6.25%</div></div>
+          <div class="cmp-bar-row"><div class="cmp-track"><div class="cmp-fill" style="background:#0fae8f" data-w="8.7"></div></div><div class="cmp-val">8.7%</div></div>
+        </div>
+
+        <div class="cmp-row">
+          <div class="cmp-lab">Quote &rarr; bind rate<small>of touches that reached a quote, share that closed</small></div>
+          <div class="cmp-bar-row"><div class="cmp-track"><div class="cmp-fill" style="background:#057BE5" data-w="9.5"></div></div><div class="cmp-val">9.5%</div></div>
+          <div class="cmp-bar-row"><div class="cmp-track"><div class="cmp-fill" style="background:#0fae8f" data-w="37.5"></div></div><div class="cmp-val">37.5%</div></div>
+        </div>
+
+        <div class="cmp-note">An inbound call is <b>2.8&times; more likely to reach a live quote</b> than the typical MO Commercial touch (65.6% vs. 23.3%) &mdash; prospects who call in are further along and easier to engage. Once quoted, campaign leads are currently closing at a higher rate (37.5% vs. 9.5%), though the call sample is small (21 quotes vs. 40); see recommendation 4. <b>Inbound calls and the MO Commercial campaign are separate, overlapping-but-not-identical populations and date ranges</b> &mdash; this comparison is directional, not a controlled test.</div>
+      </div>
+    </section>
+
+    <section class="block" id="s5" style="margin-bottom:0;">
+      <div class="bhead"><span class="ix">05</span><div><h2>Recommendations</h2></div></div>
       <div class="plan">
         <div class="pstep"><div class="num">1</div><div><div class="h">Answer inbound calls within 30 seconds</div><div class="b">Every call answered inside 30 seconds was picked up. 8 of the 10 missed calls rang 32 seconds or longer before disconnecting.</div></div></div>
         <div class="pstep"><div class="num">2</div><div><div class="h">Add backup answering for overflow</div><div class="b">Route calls that ring past roughly 30 seconds to a second line or team member so they are not lost at the 32-second mark.</div></div></div>
         <div class="pstep"><div class="num">3</div><div><div class="h">Return every missed call with a callback and text</div><div class="b">10 calls went unanswered in the period. A prompt callback and text after a missed call raises the chance of reconnecting.</div></div></div>
         <div class="pstep"><div class="num">4</div><div><div class="h">Hold the current quoting motion on answered calls</div><div class="b">21 of 22 answered calls reached a quote (95.5%). Answer rate is the primary lever between call volume and quotes.</div></div></div>
+        <div class="pstep"><div class="num">5</div><div><div class="h">Review the call-to-bind handoff</div><div class="b">Calls convert to a quote far more often than the average campaign touch, but bind rate on those quotes trails the campaign average (9.5% vs. 37.5%). With only 21 quoted calls to date, watch this over the next period before changing the follow-up process.</div></div></div>
       </div>
     </section>
 
@@ -240,7 +291,7 @@ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){
     s.style.transition='stroke-dasharray 1.1s cubic-bezier(.2,.7,.2,1)';
     requestAnimationFrame(()=>{ s.setAttribute('stroke-dasharray', d+' '+(100-d)); });});
   io.unobserve(e.target);}});},{threshold:.25});
-document.querySelectorAll('.fpanel,.split').forEach(el=>io.observe(el));
+document.querySelectorAll('.fpanel,.split,.panel').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
