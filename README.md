@@ -1,4 +1,4 @@
-# Willard Insurance — Account Hub
+# Willard Insurance - Account Hub
 
 A self-contained static site that serves as the GOAL reporting hub for **Willard
 Insurance** (Account #958). The landing page links to the client reports; each
@@ -21,7 +21,7 @@ dashboard template (navy sidebar, numbered sections, light content shell).
 └── vercel.json                                     # Static hosting config (headers, caching)
 ```
 
-There is no build step — these are plain HTML files using Google Fonts (Inter)
+There is no build step - these are plain HTML files using Google Fonts (Inter)
 and inline CSS. Brand assets and report links use relative paths, so the site
 works both when served and when opened directly from disk.
 
@@ -43,8 +43,8 @@ This repo is ready for a zero-config static deployment.
 2. Leave the defaults:
    - **Framework Preset:** `Other`
    - **Root Directory:** `./`
-   - **Build Command:** *(none — leave empty)*
-   - **Output Directory:** *(none — leave empty; files are served from the repo root)*
+   - **Build Command:** *(none - leave empty)*
+   - **Output Directory:** *(none - leave empty; files are served from the repo root)*
 3. Click **Deploy**.
 
 Vercel detects the `index.html` at the repo root and serves the site statically.
