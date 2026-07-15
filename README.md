@@ -1,4 +1,4 @@
-# Willard Insurance — Account Hub
+# Willard Insurance - Account Hub
 
 A self-contained static site that serves as the GOAL reporting hub for **Willard
 Insurance** (Account #958). The landing page links to the client reports; each
@@ -11,7 +11,8 @@ dashboard template (navy sidebar, numbered sections, light content shell).
 .
 ├── index.html                                      # Landing page (Account Hub)
 ├── reports/
-│   ├── mo-commercial-performance-review.html       # MO Commercial Performance Review (May 22 – Jun 10, 2026)
+│   ├── mo-commercial-performance-review.html       # MO Commercial Performance Review (May 22 – Jul 7, 2026)
+│   ├── mo-inbound-call-performance.html            # MO Inbound Call Performance (May 24 – Jul 6, 2026)
 │   └── mo-non-standard-auto-launch-overview.html   # MO Non-Standard Auto Launch Overview
 ├── assets/                                         # GOAL brand marks (logos, favicon)
 │   ├── goal-mark.png
@@ -20,7 +21,7 @@ dashboard template (navy sidebar, numbered sections, light content shell).
 └── vercel.json                                     # Static hosting config (headers, caching)
 ```
 
-There is no build step — these are plain HTML files using Google Fonts (Inter)
+There is no build step - these are plain HTML files using Google Fonts (Inter)
 and inline CSS. Brand assets and report links use relative paths, so the site
 works both when served and when opened directly from disk.
 
@@ -42,8 +43,8 @@ This repo is ready for a zero-config static deployment.
 2. Leave the defaults:
    - **Framework Preset:** `Other`
    - **Root Directory:** `./`
-   - **Build Command:** *(none — leave empty)*
-   - **Output Directory:** *(none — leave empty; files are served from the repo root)*
+   - **Build Command:** *(none - leave empty)*
+   - **Output Directory:** *(none - leave empty; files are served from the repo root)*
 3. Click **Deploy**.
 
 Vercel detects the `index.html` at the repo root and serves the site statically.
@@ -54,6 +55,7 @@ Routes once deployed:
 
 - `/` → landing page
 - `/reports/mo-commercial-performance-review.html` → MO Commercial Performance Review
+- `/reports/mo-inbound-call-performance.html` → MO Inbound Call Performance
 - `/reports/mo-non-standard-auto-launch-overview.html` → MO Non-Standard Auto Launch Overview
 
 ### Configuration notes
